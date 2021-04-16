@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Cliente {
 	
@@ -45,6 +46,22 @@ public class Cliente {
 
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}	
+	
+	public void cadastro(Cliente cliente) {
+		Scanner criarConta = new Scanner(System.in);
+		
+		System.out.print("Insira seu nome:");
+		cliente.setNome(criarConta.nextLine());
+		
+		System.out.print("Insira o número do seu CPF:");
+		cliente.setCpf(criarConta.nextLine());
+		
+		System.out.print("Insira a sua profissão:");
+		cliente.setProfissao(criarConta.nextLine());
+		
+		System.out.print("Informe seus rendimentos mensais:");
+		cliente.setSalario(criarConta.nextDouble());
 	}
 	
 }
