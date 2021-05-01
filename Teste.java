@@ -32,18 +32,18 @@ public class Teste {
     			   			 			
     			double comparar = cliente.getSalario();
     			if(comparar >= criarPremium) {
-    				ContaPremium conta = new ContaPremium();
+    				ContaBancaria conta = new ContaCorrente();
         			conta.setTitular(cliente);        			
         			conta.setNumeroConta(contas, random.nextInt(10000));
         			conta.imprimaDados(cliente);
-        			conta.setExtrato(50);
+        			conta.setExtrato(10);
         			contas.add(conta);        			
     			} else {
-    				ContaBancaria conta = new ContaBancaria();
+    				ContaBancaria conta = new ContaPoupanca();
     				conta.setTitular(cliente);        			
         			conta.setNumeroConta(contas, random.nextInt(1000));
         			conta.imprimaDados(cliente);
-        			conta.setExtrato(3);
+        			conta.setExtrato(5);
         			contas.add(conta);
     			}    		 			  			
         	} else {
@@ -66,21 +66,19 @@ public class Teste {
 	        	switch(menu) {
 	        	
 	        		case 1:
-	        			ContaBancaria.deposita(contas);
+	        			Operacoes.deposita(contas);
 	        			break;
-	        			
-	 
-	        		
+	        			        		
 	        		case 2:
-	        			ContaBancaria.saca(contas);
+	        			Operacoes.saca(contas);
 	        			break;
 	        			
 	        		case 3:
-	        			ContaBancaria.tranfere(contas);    			
+	        			Operacoes.tranfere(contas);    			
 	        			break;
 	        			
 	        		case 4:
-	        			ContaBancaria.verExtrato(contas);		        			
+	        			Operacoes.verExtrato(contas);		        			
 	        			break;
 	        			
 	        		case 0:

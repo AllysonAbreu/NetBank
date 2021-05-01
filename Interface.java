@@ -43,7 +43,7 @@ public final class Interface {
 	}
 	
 	public static final void LIMITE_DE_VERIFICACAO() {
-		System.out.println("Limite de verificação de saldo excedido. Por favor, procure uma de nossas agências para progredir para sua conta para o nosso serviço Premium.");
+		System.out.println("Limite de verificação de saldo excedido. Por favor, procure uma de nossas agências para progredir sua conta para o nosso serviço Premium.");
 	}
 	
 	public static final void CONFIRMACAO_SAQUE() {
